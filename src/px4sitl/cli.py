@@ -16,7 +16,7 @@ def plane():
 
 def run_drone_demo(command):
     plugins = list_plugins()
-    desired_plugins = ['nvidia', 'user']
+    desired_plugins = ['nvidia', 'pulse', 'user']
     active_extensions = [e() for e in plugins.values() if e.get_name() in desired_plugins]
     dig = DockerImageGenerator(active_extensions, '', 'tfoote/drone_demo')
     if dig.build() != 0:
