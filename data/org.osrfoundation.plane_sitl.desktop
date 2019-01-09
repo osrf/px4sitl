@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=PlaneSITL
+Comment=3-D Robot simulator
+Exec=plane_px4sitl
+Icon=gazebo
+Type=Application
+Categories=Development;Education;Science;
+StartupNotify=true
+OnlyShowIn=GNOME;Unity;
+Keywords=Run;
+Name[en_US]=Plane SITL Trainer
+Terminal=true

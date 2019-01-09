@@ -26,13 +26,19 @@ kwargs = {
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: Apache Software License'
     ],
+    'data_files': [
+        ('share/applications', [
+            'data/org.osrfoundation.iris_sitl.desktop',
+            'data/org.osrfoundation.plane_sitl.desktop']),
+    ],
     'description': 'Entrypoints to launch SITL based operator training',
     'long_description': 'Entrypoints to launch SITL based operator training',
     'license': 'Apache License 2.0',
     'python_requires': '>=3.0',
 
     'install_requires': install_requires,
-    'url': 'https://github.com/tfoote/px4sitl'
+    'url': 'https://github.com/tfoote/px4sitl',
+    'zip_safe': False,
 }
 
 setup(**kwargs)
