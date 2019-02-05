@@ -12,7 +12,7 @@ def iris():
 
 def plane():
     print("running plane")
-    run_drone_demo('roslaunch sitl_launcher plane_demo.launch world_name:=worlds/plane.world gui:=false')
+    run_drone_demo('roslaunch sitl_launcher plane_demo.launch world_name:=worlds/plane_cam.world gui:=false')
 
 
 def run_drone_demo(command):
