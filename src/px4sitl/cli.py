@@ -2,6 +2,7 @@ import sys
 
 import rocker
 from rocker.core import list_plugins
+from rocker.core import pull_image
 from rocker.core import DockerImageGenerator
 
 
@@ -16,9 +17,11 @@ def plane():
 
 def run_drone_demo(command):
     plugins = list_plugins()
+    base_image = 'tfoote/drone_demo'
     desired_plugins = ['nvidia', 'pulse', 'user']
     active_extensions = [e() for e in plugins.values() if e.get_name() in desired_plugins]
-    dig = DockerImageGenerator(active_extensions, '', 'tfoote/drone_demo')
+    pull_image(base_image)
+    dig = DockerImageGenerator(active_extensions, '', base_image)
     if dig.build() != 0:
         print ("Failed to build")
         sys.exit(1)
