@@ -8,14 +8,14 @@ install_requires = [
 
 kwargs = {
     'name': 'px4sitl',
-    'version': '0.0.1',
+    'version': '0.0.2',
     'packages': ['px4sitl'],
     'package_dir': {'': 'src'},
     # 'package_data': {'rocker': ['templates/*.em']},
     'entry_points': {
         'console_scripts': [
-            'iris_px4sitl = px4sitl.cli:iris',
-            'plane_px4sitl = px4sitl.cli:plane',
+            'mcmillan_px4sitl = px4sitl.cli:mcmillan',
+            'yosemite_px4sitl = px4sitl.cli:yosemite',
 	    ],
 	},
     'author': 'Tully Foote',
@@ -28,8 +28,8 @@ kwargs = {
     ],
     'data_files': [
         ('share/applications', [
-            'data/org.osrfoundation.iris_sitl.desktop',
-            'data/org.osrfoundation.plane_sitl.desktop']),
+            'data/org.osrfoundation.mcmillan_sitl.desktop',
+            'data/org.osrfoundation.yosemite_sitl.desktop']),
     ],
     'description': 'Entrypoints to launch SITL based operator training',
     'long_description': 'Entrypoints to launch SITL based operator training',

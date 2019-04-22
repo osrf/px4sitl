@@ -1,12 +1,12 @@
 [Desktop Entry]
-Name=IrisSITL
+Name=McMillanSITL
 Comment=3-D Robot simulator
-Exec=iris_px4sitl
+Exec=mcmillan_px4sitl
 Icon=gazebo
 Type=Application
 Categories=Development;Education;Science;
 StartupNotify=true
 OnlyShowIn=GNOME;Unity;
 Keywords=Run;
-Name[en_US]=Iris SITL Trainer
+Name[en_US]=McMillan SITL Trainer
 Terminal=true
