@@ -16,10 +16,10 @@ See the [installation instructions](install.md) for how to try it out.
 
 After installing it you can go to the launcher and run the applications
 
-* Iris SITL Trainer
-* Plane SITL Trainer
+* McMillan SITL Trainer
+* Yosemite SITL Trainer
 
 Or the commands are also availabe from the terminal:
 
- * `iris_px4sitl`
- * `plane_px4sitl`
+ * `mcmillan_px4sitl`
+ * `yosemite_px4sitl`
