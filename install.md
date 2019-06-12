@@ -2,11 +2,11 @@
 
 ## OS Installation
 * plug in ethernet cable
-* Install 16.04.5 Desktop (all settings by default unless otherwise specified)
-* enable download updates and 3rdparty
+* Install 18.04.2 Desktop (all settings by default unless otherwise specified)
+ * enable download updates and 3rdparty
 * erase ubuntu and install
-* update all packages
-* open update settings, enable nvidia driver under additional drivers (nvidia-384)
+* update all packages `sudo apt update && sudo apt dist-upgrade`
+* install nvidia driver `sudo apt install nvidia-384` 
 * restart
 
 ## Software installation
