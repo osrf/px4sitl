@@ -1,5 +1,7 @@
 # Imaging the machine and high level Summary
 
+These documents have been tested for installing from scratch with Ubuntu 18.04 with an Nvidia Graphic Card in an Asus Predator Laptop.
+
 ## OS Installation
 * plug in ethernet cable
 * Install 18.04.2 Desktop (all settings by default unless otherwise specified)
@@ -14,7 +16,6 @@
 High level summary
 * install docker https://docs.docker.com/install/linux/docker-ce/ubuntu/
 * install nvidia-docker2 https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)
-* install ros-kinetic: http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 Detailed command line for phase:
 
@@ -42,3 +43,27 @@ bash backport_xenial.bash
 sudo apt-get update
 sudo apt-get install python3-px4sitl
 ```
+# CentOS 6 variations
+
+This has also been tested on CentOS 6 using a ToughPad following this procedure.
+
+## Install Docker CE
+
+Install Docker as recommeded by upstream: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+Make sure to add your user to the `docker` group.
+
+## Install Rocker
+
+https://github.com/osrf/rocker which is available from [pypi](https://pypi.org/project/rocker/).
+I recommed using a virtualenv for isolation.
+
+## Video card variation
+
+The ToughPad does not have an nvidia graphics card, so you need to mount the integrated intel graphics card. Use the `--devices /dev/dri/card0` option when launching.
+
+
+## Running
+
+An example run will look like this:
+`rocker --x11 --user --home --devices /dev/dri/card0 --pulse tfoote/drone_demo`
